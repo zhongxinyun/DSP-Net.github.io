@@ -306,21 +306,20 @@
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">Real Dataset</h3>
-        <!-- 图像恢复前后对比框 -->
-        <img-comparison-slider>
-          <!-- 恢复前图像（first） -->
-          <img slot="first" src="./static/images/sota_120.jpg" alt="恢复前">
-          
-          <!-- 恢复后图像（second） -->
-          <img slot="second" src="./static/images/sota_180.jpg" alt="恢复后">
-        </img-comparison-slider>
-        <!-- <div class="hero-body">
+        <div class="hero-body">
           <img id="teaser" 
               src="./static/images/real_data.jpg" 
               alt="Teaser Image"
               height="100%"
               style="width: 100%; object-fit: cover; display: block;">
-        </div> -->
+        </div>
+        <img-comparison-slider>
+          <img slot="first" src="./static/images/four_bin_real_lung_before.jpg" alt="恢复前">
+          <img slot="second" src="./static/images/four_bin_real_lung_after.jpg" alt="恢复后">
+          <label slot="label-first">恢复前 / Before</label>
+          <label slot="label-second">恢复后 / After</label>
+        </img-comparison-slider>
+        
       </div>
     </div>
 
