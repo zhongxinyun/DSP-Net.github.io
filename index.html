@@ -21,6 +21,8 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -279,37 +281,46 @@
               alt="sota_180 Image"
               height="100%"
               style="width: 100%; object-fit: cover; display: block;">
-          <p>
-            Results of Simulated dataset of 180 Sparse view, photons 4e4
-          </p>
+          <h2 class="subtitle has-text-centered">
+            PCCT Reconstruction Results of Simulated dataset of 180 Sparse view, photons 4e4.
+          </h2>
+          
           <img id="sota_150" 
               src="./static/images/sota_150.jpg" 
               alt="sota_150 Image"
               height="100%"
               style="width: 100%; object-fit: cover; display: block;">
-          <p>
-            Results of Simulated dataset of 150 Sparse view, photons 2e4
-          </p>
+          <h2 class="subtitle has-text-centered">
+            PCCT Reconstruction Results of Simulated dataset of 150 Sparse view, photons 2e4.
+          </h2>
           <img id="sota_120" 
               src="./static/images/sota_120.jpg" 
               alt="sota_120 Image"
               height="100%"
               style="width: 100%; object-fit: cover; display: block;">
-          <p>
-            Results of Simulated dataset of 120 Sparse view, photons 1e4
-          </p>
+          <h2 class="subtitle has-text-centered">
+            PCCT Reconstruction Results of Simulated dataset of 120 Sparse view, photons 1e4.
+          </h2>
         </div>
         
 
         <!-- Re-rendering. -->
         <h3 class="title is-4">Real Dataset</h3>
-        <div class="hero-body">
+        <!-- 图像恢复前后对比框 -->
+        <img-comparison-slider>
+          <!-- 恢复前图像（first） -->
+          <img slot="first" src="./static/images/sota_120.jpg" alt="恢复前">
+          
+          <!-- 恢复后图像（second） -->
+          <img slot="second" src="./static/images/sota_180.jpg" alt="恢复后">
+        </img-comparison-slider>
+        <!-- <div class="hero-body">
           <img id="teaser" 
               src="./static/images/real_data.jpg" 
               alt="Teaser Image"
               height="100%"
               style="width: 100%; object-fit: cover; display: block;">
-        </div>
+        </div> -->
       </div>
     </div>
 
